@@ -4,15 +4,11 @@ import CardPerson from "./components/CardPerson";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import "./Terapist.css";
 
-const TerapistList = ({
-  selectedCategory,
-  handleSelect,
-  handleBack,
-  selectedPerson,
-}) => {
+const TerapistList = ({ selectedCategory, handleSelect, handleBack }) => {
   const [persons, setPersons] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [selectedPerson, setSelectedPerson] = useState(null); // Added selectedPerson state
 
   useEffect(() => {
     const fetchPersons = async () => {
@@ -20,7 +16,7 @@ const TerapistList = ({
         const response = await axios.get(
           "http://localhost:2000/terapist/booking"
         );
-        setPersons(response.data); 
+        setPersons(response.data);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -39,8 +35,13 @@ const TerapistList = ({
   if (error) return <div>Error: {error}</div>;
 
   const handleSelectAlert = (item) => {
-    handleSelect(item); 
+    setSelectedPerson(item); // Update selectedPerson state
     alert(`You have selected ${item.name}`);
+  };
+
+  const handleBackAlert = () => {
+    setSelectedPerson(null);
+    alert("Going back...");
   };
 
   return (
@@ -58,11 +59,23 @@ const TerapistList = ({
               service={selectedPerson.service}
               rating={selectedPerson.rating}
             />
+            <div className="back-treatment">
+              <button onClick={handleBackAlert} style={{ marginTop: "20px" }}>
+                <GoArrowLeft />
+                Back
+              </button>
+            </div>
           </div>
         )}
-        <div style={{ display: "flex", flexWrap: "wrap" }}>
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+          }}
+        >
           {filteredPersons.map((item, index) => (
-            <div key={index} style={{ margin: "10px" }}>
+            <div key={index} style={{ margin: "10px", textAlign: "center" }}>
               <CardPerson
                 image={item.image}
                 name={item.name}
@@ -70,21 +83,23 @@ const TerapistList = ({
                 rating={item.rating}
               />
               <button
-                onClick={() => handleSelectAlert(item)} 
-                style={{ marginTop: "10px" }}
+                onClick={() => handleSelectAlert(item)}
+                style={{
+                  marginTop: "10px",
+                  padding: "10px 20px",
+                  backgroundColor: "black", // Green background
+                  color: "white", // White text
+                  border: "none",
+                  borderRadius: "5px",
+                  cursor: "pointer",
+                  display: "flex",
+                  alignItems: "center",
+                }}
               >
-                Select
+                Select <GoArrowRight style={{ marginLeft: "5px" }} />
               </button>
             </div>
           ))}
-        </div>
-        <div className="select-person">
-          <button
-            onClick={handleBack} 
-            style={{ marginTop: "10px" }}
-          >
-            Back <GoArrowLeft />
-          </button>
         </div>
       </main>
     </div>

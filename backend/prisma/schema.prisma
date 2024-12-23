@@ -60,6 +60,7 @@ model Booking {
   start_time    DateTime
   treatmentName String
   price         Int
+  service       Int
   terapistName  String
   total         Int
 

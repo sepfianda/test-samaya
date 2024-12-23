@@ -115,6 +115,8 @@ app.post("/booking", async (req, res) => {
       start_time: newBookingData.start_time,
       treatmentName: newBookingData.treatmentName,
       terapistName: newBookingData.terapistName,
+      price:newBookingData.price,
+      service:newBookingData.service,
       total: newBookingData.total,
     },
   });

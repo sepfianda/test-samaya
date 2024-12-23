@@ -20,12 +20,12 @@
   }
   
   .Review-header {
-    background-color: #d9b061;
+    background-color: #ffffff;
     padding-top: 50px;
     padding-bottom: 50px;
     border-radius: 30px;
     h1 {
-      color: #ffffff;
+      color: #d9b061;
       text-align: center;
       
     }

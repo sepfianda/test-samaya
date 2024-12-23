@@ -7,13 +7,14 @@ import { GoArrowLeft } from "react-icons/go";
 const Detail = () => {
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
     phone: "",
-    branchId: "",
+    branchName: "",
     date: "",
     start_time: "",
-    treatmentId: "",
-    terapistId: "",
+    treatmentName: "",
+    price: "",
+    terapistName: "",
+    total: "",
   });
 
   const handleChange = (e) => {
@@ -26,14 +27,31 @@ const Detail = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      // Convert date to ISO-8601 format
+      const dateObject = new Date(formData.date);
+      const isoDate = dateObject.toISOString(); // Convert to ISO string
+
+      // Prepare data for submission
+      const dataToSubmit = {
+        ...formData,
+        date: isoDate, // Use the ISO formatted date
+      };
+
       const response = await axios.post(
         "http://localhost:2000/booking",
         formData
       );
       console.log(response.data);
+      alert("Booking submitted successfully!"); // Alert on successful submission
     } catch (error) {
       console.error("Error creating booking:", error);
+      alert("Error creating booking. Please try again."); // Alert on error
     }
+  };
+
+  const handleBack = () => {
+    alert("Going back to the previous step."); // Alert on back button click
+    // Add logic to navigate back if needed
   };
 
   return (
@@ -60,20 +78,6 @@ const Detail = () => {
               </div>
             </div>
             <div>
-              <label htmlFor="email">Email</label>
-              <div>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="input your email"
-                  required
-                />
-              </div>
-            </div>
-            <div>
               <label htmlFor="phone">Phone Number</label>
               <div>
                 <input
@@ -88,16 +92,16 @@ const Detail = () => {
               </div>
             </div>
             <div>
-              <label htmlFor="branchId">Branch ID</label>
+              <label htmlFor="branchName">Branch</label>
               <div>
                 <input
                   type="text"
-                  id="branchId"
-                  name="branchId" 
-                  value={formData.branchId}
+                  id="branchName"
+                  name="branchName"
+                  value={formData.branchName}
                   onChange={handleChange}
-                  placeholder="input branch ID"
-                  required 
+                  placeholder="input branch name"
+                  required
                 />
               </div>
             </div>
@@ -107,10 +111,10 @@ const Detail = () => {
                 <input
                   type="date"
                   id="date"
-                  name="date" 
+                  name="date"
                   value={formData.date}
                   onChange={handleChange}
-                  required 
+                  required
                 />
               </div>
             </div>
@@ -120,38 +124,66 @@ const Detail = () => {
                 <input
                   type="time"
                   id="start_time"
-                  name="start_time" 
+                  name="start_time"
                   value={formData.start_time}
                   onChange={handleChange}
-                  required 
+                  required
                 />
               </div>
             </div>
             <div>
-              <label htmlFor="treatmentId">Treatment ID</label>
+              <label htmlFor="treatmentName">Treatment Name</label>
               <div>
                 <input
                   type="text"
-                  id="treatmentId"
-                  name="treatmentId" 
-                  value={formData.treatmentId}
+                  id="treatmentName"
+                  name="treatmentName"
+                  value={formData.treatmentName}
                   onChange={handleChange}
-                  placeholder="input treatment ID"
-                  required 
+                  placeholder="input treatment name"
+                  required
                 />
               </div>
             </div>
             <div>
-              <label htmlFor="terapistId">Terapist ID</label>
+              <label htmlFor="terapistName">Terapist Name</label>
               <div>
                 <input
                   type="text"
-                  id="terapistId"
-                  name="terapistId" 
-                  value={formData.terapistId}
+                  id="terapistName"
+                  name="terapistName"
+                  value={formData.terapistName}
                   onChange={handleChange}
-                  placeholder="input terapist ID"
-                  required 
+                  placeholder="input terapist name"
+                  required
+                />
+              </div>
+            </div>
+            <div>
+              <label htmlFor="terapistName">Price</label>
+              <div>
+                <input
+                  type="number"
+                  id="price"
+                  name="price"
+                  value={formData.price}
+                  onChange={handleChange}
+                  placeholder="input price here"
+                  required
+                />
+              </div>
+            </div>
+            <div>
+              <label htmlFor="terapistName">Total Price</label>
+              <div>
+                <input
+                  type="number"
+                  id="total"
+                  name="total"
+                  value={formData.total}
+                  onChange={handleChange}
+                  placeholder="input total price"
+                  required
                 />
               </div>
             </div>
@@ -161,12 +193,7 @@ const Detail = () => {
               </button>
             </div>
             <div className="button-back">
-              <button
-                type="button"
-                onClick={() => {
-                  
-                }}
-              >
+              <button type="button" onClick={handleBack}>
                 <GoArrowLeft />
                 Back
               </button>

@@ -38,6 +38,20 @@ const Review = () => {
     fetchBooking();
   }, []);
 
+  const handleSubmit = async () => {
+    try {
+      const response = await axios.post("http://localhost:2000/submit", {
+        orderDetails,
+        paymentDetails,
+        total,
+      });
+      console.log("Submission successful:", response.data);
+      alert("Booking submitted successfully!");
+    } catch (error) {
+      console.error("Error submitting booking:", error);
+      alert("Error submitting booking. Please try again.");
+    }
+  };
 
   return (
     <div>
@@ -141,7 +155,7 @@ const Review = () => {
         <div className="total">
           <span>Total: {total}</span>
         </div>
-        <button className="submit-button">Submit</button>
+        <button className="submit-button" onClick={handleSubmit}>Submit</button>
       </main>
     </div>
   );
