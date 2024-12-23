@@ -1,0 +1,112 @@
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px; 
+        font-family: sans-serif;
+        padding: 10px;
+    }
+  
+    h1 {
+        font-size: 24px; 
+  
+    .container {
+        padding: 10px; 
+    }
+  
+    .menu {
+        display: block; 
+        text-align: center; 
+    }
+  
+  }
+}
+
+  .Treatment-header {
+    background-color: #ffffff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    h1 {
+      color: #d9b061;
+      text-align: center;
+    }
+  }
+
+  .Treatment-hero {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 0.25em 0.25em rgba(0, 0, 0, 0.25);
+    text-align: center;
+    padding-left: 50px;
+    padding-top: 30px;
+  }
+
+  .categories {
+    margin-bottom: 20px;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+    text-align: left;
+  }
+
+  .card-treatment{
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 80%; 
+    margin: 5px; 
+    transition: transform 0.2s; 
+    background-color: #fff; 
+    text-align: center;
+  }
+  
+  .card-treatment:hover {
+    transform: scale(1.05); 
+  }
+  
+  .treatment-image {
+    width: 50%; 
+    height: auto; 
+    padding: 5px;
+    border-radius: 50%;
+  }
+  
+  .treatment-content {
+    padding: 16px; 
+  }
+  
+  .treatment-title {
+    font-size: 0.9em; 
+    margin: 0; 
+    color: #333; 
+  }
+  
+  .treatment-price {
+    color: #555; 
+    margin-top: 8px; 
+    line-height: 1.5; 
+  }
+  
+  .select-treatment {
+    margin-top: 100px;
+    text-align: center;
+    width: 80%;
+  }
+
+  .back-treatment {
+    padding: 10px; 
+    text-align: center;
+    width: 80%;
+  }
+
+  .container-person {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px; 
+    background-color: #ffffff; 
+    font-size: small;
+  }
+
+
+  
+ 

@@ -1,0 +1,99 @@
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px; 
+        font-family: sans-serif;
+        margin: 15px;
+    }
+  
+    h1 {
+        font-size: 24px; 
+    }
+  
+    .container {
+        padding: 10px; 
+    }
+  
+    .menu {
+        display: block; 
+        text-align: center; 
+  
+  }
+  }
+
+  .Detail-header {
+    background-color: #ffffff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    h1 {
+      color: #d9b061;
+      text-align: center;
+    }
+  }
+
+  .Detail-hero {
+    background-color: #ffffff;
+    box-shadow: 0 0 0.25em 0.25em rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    h3 {
+      text-align: left;
+      color: #000000;
+      font-size: medium;
+    }
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+    padding: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="phone"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .button {
+    background-color: #ffffff; 
+    color: #333; 
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 75%;
+    margin-bottom: 10px;
+  }
+  
+  .button:hover {
+    background-color: #ffffff; 
+  }
+  
+  .button.back {
+    background-color: #ffffff; 
+    color: #333; 
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 75%;
+    margin-bottom: 10px;
+  }
+  
+  .button.back:hover {
+    background-color: #f5e0a2; }
+  
+
+

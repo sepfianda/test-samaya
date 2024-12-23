@@ -1,0 +1,67 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Branch {
+  id         Int    @id @default(autoincrement())
+  name       String
+  phone      String
+  address    String
+  start_hour String
+  close_hour String
+
+  @@map("branchs")
+}
+
+model Treatment {
+  id         Int     @id @default(autoincrement())
+  image      String
+  category   String
+  name       String
+  duration   String
+  branchName String
+  price      Decimal @db.Decimal(10, 2)
+
+  @@map("treatments")
+}
+
+model Terapist {
+  id          Int       @id @default(autoincrement())
+  image       String
+  name        String
+  service     Decimal   @db.Decimal(10, 2)
+  rating      Decimal   @db.Decimal(5, 2)
+  bookingId   Int? // Optional
+  branchId    Int? // Optional
+  date        DateTime? // Optional
+  start_time  DateTime? // Optional
+  treatmentId Int? // Optional
+
+  @@map("terapist")
+}
+
+model Booking {
+  id            Int      @id @default(autoincrement())
+  name          String
+  phone         String
+  branchName    String
+  date          DateTime
+  start_time    DateTime
+  treatmentName String
+  price         Int
+  terapistName  String
+  total         Int
+
+  @@map("bookings")
+}

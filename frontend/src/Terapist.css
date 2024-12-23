@@ -1,0 +1,117 @@
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px; 
+        font-family: sans-serif;
+        padding: 10px;
+    }
+  
+    h1 {
+        font-size: 24px; 
+    }
+  
+    .container {
+        padding: 10px; 
+    }
+  
+    .menu {
+        display: block; 
+        text-align: center; 
+    }
+  
+  }
+
+  .Terapist-header {
+    background-color: #ffffff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    h1 {
+      color: #d9b061;
+      text-align: center;
+    }
+  }
+
+  .Terapist-hero {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 0.25em 0.25em rgba(0, 0, 0, 0.25);
+    text-align: center;
+    padding-left: 50px;
+    padding-top: 30px;
+  }
+
+  .card-person{
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 85px; 
+    margin: 5px; 
+    transition: transform 0.2s;
+    background-color: #fff; 
+   
+    
+  }
+  
+  .card-person:hover {
+    transform: scale(1.05); 
+  }
+  
+  .person-image {
+    width: 50%; 
+    height: auto; 
+    padding: 5px;
+    border-radius: 50%;
+  }
+  
+  .person-content {
+    padding: 16px; /
+  }
+  
+  .person-name {
+    font-size: small; 
+    margin: 0; 
+    color: #333; 
+  }
+  
+  .container-person {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px; 
+    background-color: #ffffff; 
+    font-size: 0.7em;
+  }
+
+  .left {
+    font-size: 0.5em;
+    text-align: left;
+    margin: 0;
+  }
+
+  .right {
+    font-size: 0.5em;
+    text-align: right;
+    margin: 0;
+  }
+
+  
+
+  .categories {
+    margin-bottom: 20px;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+    text-align: left;
+  }
+
+  .select-person {
+    margin-top: 100px;
+    text-align: center;
+    width: 80%;
+  }
+
+  .back-person {
+    padding: 10px; 
+    text-align: center;
+    width: 80%;
+  }

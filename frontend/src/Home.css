@@ -1,0 +1,88 @@
+@media only screen and (max-width: 600px) {
+  body {
+      font-size: 14px; 
+      font-family: sans-serif;
+  }
+
+  h1 {
+      font-size: 24px; 
+  }
+
+  .container {
+      padding: 10px; 
+  }
+
+  .menu {
+      display: block; 
+      text-align: center; 
+  }
+
+}
+
+.App-header {
+  background-color: #ffffff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  h1 {
+    color: #d9b061;
+    text-align: center;
+  }
+}
+
+.App-hero {
+  background-color: #d9b061;
+  margin: 0;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  p {
+    text-align: left;
+    color: #ffffff;
+    font-size: large;
+  }
+  .button {
+    padding: 10px; 
+    background-color: #ffffff;
+    color: #d9b061;
+   
+  }
+}
+
+.card {
+  border: 1px solid #ccc; 
+  border-radius: 8px; 
+  overflow: hidden; 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+  max-width: 100%; 
+  margin: 20px; 
+  transition: transform 0.2s; 
+  background-color: #fff; 
+}
+
+.card:hover {
+  transform: scale(1.05); 
+}
+
+.card-image {
+  width: 100%; 
+  height: auto; 
+  padding: 5px;
+}
+
+.card-content {
+  padding: 16px; 
+}
+
+.card-title {
+  font-size: 0.7em; 
+  margin: 0; 
+  color: #333; 
+  text-align: left;
+}
+
+.card-description {
+  color: #000000; 
+  margin-top: 8px; 
+  line-height: 1.5; 
+}
+

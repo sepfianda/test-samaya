@@ -1,0 +1,76 @@
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px; 
+        font-family: sans-serif;
+        margin: 15px;
+    }
+  
+    h1 {
+        font-size: 24px; 
+    }
+
+    .menu {
+        display: block; 
+        text-align: center; 
+    }
+  
+  }
+
+  .Location-header {
+    background-color: #ffffff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    h1 {
+      color: #d9b061;
+      text-align: center;
+    }
+  }
+
+  .Location-hero {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 0.25em 0.25em rgba(0, 0, 0, 0.25);
+    text-align: center;
+    padding-left: 50px;
+    padding-top: 30px;
+  }
+
+  .item1 {
+    text-align: center;
+    width: 100%;
+    font-size: large;
+  }
+
+  .select-button {
+    margin-top: 100px;
+    text-align: center;
+    width: 85%;
+    
+  }
+
+  .back-button {
+    padding: 10px; 
+    text-align: center;
+    width: 55%;
+  
+  }
+  
+  .selected-location {
+    margin: 30px;
+    padding: 20px;
+    margin-left: 0;
+    border-radius: 5px;
+    background-color: #ffffff; 
+    text-align: center;
+  }
+  
+  .selected-location h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #c7974d; 
+  }
+  
+  .selected-location p {
+    margin: 5px 0 0;
+    color: #333; 
+  }

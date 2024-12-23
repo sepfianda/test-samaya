@@ -1,0 +1,104 @@
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px; 
+        font-family: sans-serif;
+    }
+  
+    h1 {
+        font-size: 24px; 
+    }
+  
+    .container {
+        padding: 10px; 
+    }
+  
+    .menu {
+        display: block; 
+        text-align: center; 
+    }
+  
+  }
+  
+  .Review-header {
+    background-color: #d9b061;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 30px;
+    h1 {
+      color: #ffffff;
+      text-align: center;
+      
+    }
+  }
+
+  .Review-hero {
+    background-color: #ffffff;
+    box-shadow: 0 0 0.25em 0.25em rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    h3 {
+      text-align: center;
+      color: #d9b061;
+      font-size: large;
+      font-weight: bolder;
+    }
+    p {
+    text-align: left;
+      color: #d9b061;
+      font-size: medium;
+    }
+  }
+
+  
+  .order-details{
+    border: 2px solid #808080; 
+    padding: 10px; 
+    border-radius: 10px;
+
+    label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+    padding: 5px;
+    }
+
+    span {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: right;
+    padding: 5px;
+    }
+
+  }
+
+  .payment-details {
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      text-align: left;
+      padding: 5px;
+      }
+  
+      span {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      text-align: right;
+      padding: 5px;
+      }
+  }
+
+  .total {
+    margin: 20px;
+    font-weight: bolder;
+    text-align: center;
+    font-size: larger;
+  }
+
+
+
+  
